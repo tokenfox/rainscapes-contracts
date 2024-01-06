@@ -6,6 +6,7 @@ import {RainscapesRenderer} from "../src/RainscapesRenderer.sol";
 import {RainscapesObservatory} from "../src/RainscapesObservatory.sol";
 import {DefaultScriptSource} from "../src/DefaultScriptSource.sol";
 import {IGenerativeSeriesExtension} from "../src/interfaces/IGenerativeSeriesExtension.sol";
+import {RainscapesData} from "../src/RainscapesData.sol";
 
 contract DeployRainscapes is Script {
     uint256 private deployerPrivateKey;
@@ -38,6 +39,9 @@ contract DeployRainscapes is Script {
 
         // Set renderer in extension for the creator contract address
         genSeriesExtension.setRenderer(creatorContractAddress, address(renderer));
+
+        // Deploy data contract
+        RainscapesData data = new RainscapesData(creatorContractAddress, address(genSeriesExtension));
 
         // End broadcast
         vm.stopBroadcast();
