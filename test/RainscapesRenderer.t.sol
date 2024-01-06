@@ -5,17 +5,17 @@ import {VmSafe} from "forge-std/Vm.sol";
 import {Test, console2} from "forge-std/Test.sol";
 import "@solady/src/utils/LibString.sol";
 import {RainscapesRenderer} from "../src/RainscapesRenderer.sol";
-import {NativeScriptSource} from "../src/NativeScriptSource.sol";
+import {DefaultScriptSource} from "../src/DefaultScriptSource.sol";
 import {MockObservatory} from "./mocks/MockObservatory.sol";
 
 contract RainscapesRendererTest is Test {
     RainscapesRenderer public renderer;
     MockObservatory public observatory;
-    NativeScriptSource public scriptSource;
+    DefaultScriptSource public scriptSource;
 
     function setUp() public {
         observatory = new MockObservatory();
-        scriptSource = new NativeScriptSource();
+        scriptSource = new DefaultScriptSource();
         renderer = new RainscapesRenderer(address(observatory), address(scriptSource));
     }
 

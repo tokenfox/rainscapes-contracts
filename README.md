@@ -79,3 +79,7 @@ Run tests with debug info:
 
 ## Creating a test batch
 
+Create full test batch of 64 tokens with:
+
+        forge script CreateTestBatch
+
