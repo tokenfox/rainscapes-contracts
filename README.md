@@ -71,21 +71,21 @@ Clone this repository
 
 Install foundry + Forge:
 
-        https://getfoundry.sh
+    https://getfoundry.sh
 
 Build:
 
-        forge build
+    forge build
 
 Run tests with debug info:
 
-        forge test -vvv
+    forge test -vvv
 
 ## Creating a test batch
 
 Create full test batch of 64 tokens with:
 
-        forge script CreateTestBatch
+    forge script CreateTestBatch
 
 Full test batch is generated with data stored to `generated` folder
 
@@ -100,7 +100,7 @@ TAKE CAUTION as you need to fill in private key of your deployer wallet.
 
 After the file is configured, make sure to load it with:
 
-        source .env
+    source .env
 
 ### 2. Deploy Manifold creator contract
 
@@ -115,7 +115,7 @@ Once you have a creator contract deployed, the generative series extensions
 is required. If this has been already deployed, find out the address. If
 a deployment is necessary it can be done with:
 
-        forge script DeployExtension -f $RPC_URL [--broadcast --verify]
+    forge script DeployExtension -f $RPC_URL [--broadcast --verify]
 
 Once extension is available, it needs to be registered into creator contract.
 - Open your Manifold creator contract in Etherscan
@@ -131,4 +131,4 @@ generative series extension addresses to .env variable fields
 
 Deploy (or simulate without broadcast + verify):
 
-        forge script DeployRainscapes -f $RPC_URL [--broadcast --verify]
+    forge script DeployRainscapes -f $RPC_URL [--broadcast --verify]
