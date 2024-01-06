@@ -58,3 +58,15 @@ an allowlist phase. Addresses can be added/removed to allowlist freely.
 Minter has hard-coded creator contract and extension addresses that cannot be
 changed. Once a minting period has been set, it cannot be cancelled
 (but creator contract admin can change minter address to deny access).
+
+## Developer Guide
+
+Install foundry+forge
+
+Build:
+
+        forge build
+
+Run tests with debug info:
+
+        forge test -vvv
