@@ -1,0 +1,7 @@
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+@manifoldxyz/creator-core-solidity/=lib/creator-core-solidity/contracts/
+@manifoldxyz/libraries-solidity/=lib/libraries-solidity/
+@openzeppelin/contracts-upgradeable/=lib/libraries-solidity/lib/openzeppelin-contracts-upgradeable/contracts/
+@openzeppelin/contracts/=lib/libraries-solidity/lib/openzeppelin-contracts/contracts/
+@solady/=lib/solady/
