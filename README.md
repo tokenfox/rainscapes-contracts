@@ -132,3 +132,14 @@ generative series extension addresses to .env variable fields
 Deploy (or simulate without broadcast + verify):
 
     forge script DeployRainscapes -f $RPC_URL [--broadcast --verify]
+
+### 5. Deploy minter
+
+If minting is done using allowlist/public phase minting, finally
+minter needs to be deployed:
+
+    forge script DeployMinter -f $RPC_URL [--broadcast --verify]
+
+The script does everything including setting mint price and scheduling
+the mint. Walk through the script before running it to make sure it contains
+correct configurations.

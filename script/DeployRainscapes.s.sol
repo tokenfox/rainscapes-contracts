@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+import {console2} from "forge-std/Test.sol";
 import {Script} from "forge-std/Script.sol";
 import {RainscapesRenderer} from "../src/RainscapesRenderer.sol";
 import {RainscapesObservatory} from "../src/RainscapesObservatory.sol";
@@ -42,6 +43,7 @@ contract DeployRainscapes is Script {
 
         // Deploy data contract
         RainscapesData data = new RainscapesData(creatorContractAddress, address(genSeriesExtension));
+        console2.log("Data contract deployed to", address(data));
 
         // End broadcast
         vm.stopBroadcast();
