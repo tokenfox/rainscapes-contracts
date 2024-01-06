@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "./TraitsWithRarity.sol";
+import "./libs/TraitsWithRarity.sol";
 
 contract RainscapesTraits is TraitsWithRarity {
     uint8 constant BLOCKHASH_INDEX_X = 0;

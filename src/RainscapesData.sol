@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import {IGenerativeSeriesRenderer} from "./IGenerativeSeriesRenderer.sol";
+import {IGenerativeSeriesRenderer} from "./interfaces/IGenerativeSeriesRenderer.sol";
 
 interface IRendererAccess {
     function renderer(address creatorContractAddress) external view returns (address);

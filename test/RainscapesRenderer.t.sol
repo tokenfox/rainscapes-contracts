@@ -6,7 +6,7 @@ import {Test, console2} from "forge-std/Test.sol";
 import "@solady/src/utils/LibString.sol";
 import {RainscapesRenderer} from "../src/RainscapesRenderer.sol";
 import {DefaultScriptSource} from "../src/DefaultScriptSource.sol";
-import {MockObservatory} from "./mocks/MockObservatory.sol";
+import {MockObservatory} from "../src/mocks/MockObservatory.sol";
 
 contract RainscapesRendererTest is Test {
     RainscapesRenderer public renderer;

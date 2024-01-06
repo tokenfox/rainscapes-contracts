@@ -5,7 +5,7 @@ import {Script} from "forge-std/Script.sol";
 import {RainscapesRenderer} from "../src/RainscapesRenderer.sol";
 import {RainscapesObservatory} from "../src/RainscapesObservatory.sol";
 import {DefaultScriptSource} from "../src/DefaultScriptSource.sol";
-import {IGenerativeSeriesExtension} from "../src/IGenerativeSeriesExtension.sol";
+import {IGenerativeSeriesExtension} from "../src/interfaces/IGenerativeSeriesExtension.sol";
 
 contract DeployRainscapes is Script {
     uint256 private deployerPrivateKey;

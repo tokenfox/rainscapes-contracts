@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import {IRainscapesObservatory} from "./IRainscapesObservatory.sol";
+import {IRainscapesObservatory} from "./interfaces/IRainscapesObservatory.sol";
 
 contract RainscapesObservatory is IRainscapesObservatory {
     function getObservationWindow()

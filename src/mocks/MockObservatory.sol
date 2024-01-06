@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import {IRainscapesObservatory} from '../../src/IRainscapesObservatory.sol';
+import {IRainscapesObservatory} from '../interfaces/IRainscapesObservatory.sol';
 
 contract MockObservatory is IRainscapesObservatory {
     uint256 public temporalWindow = 100;

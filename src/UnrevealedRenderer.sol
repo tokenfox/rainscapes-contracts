@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import {IGenerativeSeriesRenderer} from "./IGenerativeSeriesRenderer.sol";
 import "@solady/src/utils/LibString.sol";
 import "@solady/src/utils/Base64.sol";
+import {IGenerativeSeriesRenderer} from "./interfaces/IGenerativeSeriesRenderer.sol";
 
 contract UnrevealedRenderer is IGenerativeSeriesRenderer {
     constructor() {}

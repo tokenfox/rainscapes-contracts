@@ -3,9 +3,9 @@ pragma solidity ^0.8.13;
 
 import {VmSafe} from "forge-std/Vm.sol";
 import {Test, console2} from "forge-std/Test.sol";
-import {RainscapesMinter} from "../src/RainscapesMinter.sol";
-import {GenerativeSeriesExtension} from "../src/GenerativeSeriesExtension.sol";
 import {ERC721Creator} from "@manifoldxyz/creator-core-solidity/ERC721Creator.sol";
+import {GenerativeSeriesExtension} from "../src/GenerativeSeriesExtension.sol";
+import {RainscapesMinter} from "../src/RainscapesMinter.sol";
 
 contract RainscapesMinterTest is Test {
     RainscapesMinter public minter;

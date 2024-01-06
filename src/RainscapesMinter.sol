@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import {IGenerativeSeriesExtension} from "./IGenerativeSeriesExtension.sol";
+import {IGenerativeSeriesExtension} from "./interfaces/IGenerativeSeriesExtension.sol";
 
 contract RainscapesMinter is Ownable {
     struct MintInfo {

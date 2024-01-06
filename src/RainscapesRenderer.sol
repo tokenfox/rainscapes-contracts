@@ -5,11 +5,11 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@solady/src/utils/LibString.sol";
 import "@solady/src/utils/Base64.sol";
 import "@solady/src/utils/FixedPointMathLib.sol";
-import {Trigonometry} from "./Trigonometry.sol";
-import {IGenerativeSeriesRenderer} from "./IGenerativeSeriesRenderer.sol";
+import {Trigonometry} from "./libs/Trigonometry.sol";
+import {IGenerativeSeriesRenderer} from "./interfaces/IGenerativeSeriesRenderer.sol";
 import {RainscapesTraits} from "./RainscapesTraits.sol";
-import {IRainscapesObservatory} from "./IRainscapesObservatory.sol";
-import {IScriptSource} from "./IScriptSource.sol";
+import {IRainscapesObservatory} from "./interfaces/IRainscapesObservatory.sol";
+import {IScriptSource} from "./interfaces/IScriptSource.sol";
 
 contract RainscapesRenderer is IGenerativeSeriesRenderer, RainscapesTraits, Ownable {
     struct TokenProperties {

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import {IScriptSource} from "./IScriptSource.sol";
+import {IScriptSource} from "./interfaces/IScriptSource.sol";
 
 contract DefaultScriptSource is IScriptSource {
     string public script =

@@ -5,8 +5,8 @@ import {AdminControl} from "@manifoldxyz/libraries-solidity/contracts/access/Adm
 import {IERC721CreatorCore} from "@manifoldxyz/creator-core-solidity/core/IERC721CreatorCore.sol";
 import "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 import {ICreatorExtensionTokenURI} from "@manifoldxyz/creator-core-solidity/extensions/ICreatorExtensionTokenURI.sol";
-import {IGenerativeSeriesRenderer} from "./IGenerativeSeriesRenderer.sol";
-import {IGenerativeSeriesExtension} from "./IGenerativeSeriesExtension.sol";
+import {IGenerativeSeriesRenderer} from "./interfaces/IGenerativeSeriesRenderer.sol";
+import {IGenerativeSeriesExtension} from "./interfaces/IGenerativeSeriesExtension.sol";
 
 contract GenerativeSeriesExtension is AdminControl, ICreatorExtensionTokenURI, IGenerativeSeriesExtension {
     mapping(address => uint16) public maxSupply;
