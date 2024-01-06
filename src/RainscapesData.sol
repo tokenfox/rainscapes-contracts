@@ -12,7 +12,7 @@ contract RainscapesData {
     address public creatorContract;
     IRendererAccess public genSeriesExtension;
 
-    constructor (address _creatorContract, address _genSeriesExtension) {
+    constructor(address _creatorContract, address _genSeriesExtension) {
         creatorContract = _creatorContract;
         genSeriesExtension = IRendererAccess(_genSeriesExtension);
     }
