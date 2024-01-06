@@ -65,9 +65,13 @@ The data contract can be plugged in to creator contract and generative
 series extension, and provides a layer of convenience for accessing all
 on-chain assets (token data in URI, JSON, HTML and image formats).
 
-## How to build
+## How to build and develop
 
-Install foundry+forge
+Clone this repository
+
+Install foundry + Forge:
+
+        https://getfoundry.sh
 
 Build:
 
@@ -83,3 +87,35 @@ Create full test batch of 64 tokens with:
 
         forge script CreateTestBatch
 
+Full test batch is generated with data stored to `generated` folder
+
+## Deploying
+
+### 1. Prepare configurations
+
+Take copy of `.env.EXAMPLE` into `.env`. Fill in missing variables.
+TAKE CAUTION as you need to fill in private key of your deployer wallet.
+
+### 2. Deploy Manifold creator contract
+
+Start by creating a Manifold creator contract. See Manifold's documentation
+on:
+
+https://docs.manifold.xyz/v/manifold-studio/references/creator-contract
+
+### 3. Deploy and Register Manifold Extension
+
+Once you have a creator contract deployed, the generative series extensions
+is required. If this has been already deployed, find out the address. If
+a deployment is necessary it can be done with:
+
+        forge script DeployExtension
+
+Once extension is available, it needs to be registered into creator
+contract.
+
+- Open your Manifold creator contract in Etherscan
+- Call `registerExtension` with the extension address
+- Leave baseURI empty (or put in single space)
+
+### 4. Deploy Rainscape stack
