@@ -93,8 +93,14 @@ Full test batch is generated with data stored to `generated` folder
 
 ### 1. Prepare configurations
 
-Take copy of `.env.EXAMPLE` into `.env`. Fill in missing variables.
+Take copy of `.env.EXAMPLE` into `.env`. Fill in missing variables
+using the network of your preference (Sepolia, Optimism, etc.). Note
+that both RPC URLs and Etherscan API keys are network dependent.
 TAKE CAUTION as you need to fill in private key of your deployer wallet.
+
+After the file is configured, make sure to load it with:
+
+        source .env
 
 ### 2. Deploy Manifold creator contract
 
@@ -109,13 +115,20 @@ Once you have a creator contract deployed, the generative series extensions
 is required. If this has been already deployed, find out the address. If
 a deployment is necessary it can be done with:
 
-        forge script DeployExtension
+        forge script DeployExtension -f $RPC_URL [--broadcast --verify]
 
-Once extension is available, it needs to be registered into creator
-contract.
-
+Once extension is available, it needs to be registered into creator contract.
 - Open your Manifold creator contract in Etherscan
 - Call `registerExtension` with the extension address
 - Leave baseURI empty (or put in single space)
+- You can verify the registration was successful by calling `getExtensions`
 
 ### 4. Deploy Rainscape stack
+
+Make sure to setup both your creator contract address and Manifold
+generative series extension addresses to .env variable fields 
+(`MANIFOLD_CREATOR_CONTRACT_ADDRESS`, `MANIFOLD_EXTENSION_ADDRESS`).
+
+Deploy (or simulate without broadcast + verify):
+
+        forge script DeployRainscapes -f $RPC_URL [--broadcast --verify]

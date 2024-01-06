@@ -2,9 +2,8 @@
 pragma solidity ^0.8.13;
 
 import {Script} from "forge-std/Script.sol";
-import {GenerativeSeriesExtension} from "../src/GenerativeSeriesExtension.sol";
 
-contract DeployExtension is Script {
+contract DeployRainscapes is Script {
     uint256 private deployerPrivateKey;
 
     function setUp() public {
@@ -12,7 +11,6 @@ contract DeployExtension is Script {
     }
 
     function run() public {
-        vm.broadcast(deployerPrivateKey);
-        GenerativeSeriesExtension extension = new GenerativeSeriesExtension();
+        // TODO: copy from repo
     }
 }
