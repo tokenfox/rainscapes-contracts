@@ -2,7 +2,6 @@
 pragma solidity ^0.8.20;
 
 interface IGenerativeSeriesExtension {
-    // TODO: add functions get getting renderer and tokenHash in V2
     function createSeries(address creatorContractAddress, uint16 _maxSupply, address _renderer) external;
     function setRenderer(address creatorContractAddress, address _renderer) external;
     function setMinter(address creatorContractAddress, address _minter) external;

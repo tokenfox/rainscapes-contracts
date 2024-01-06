@@ -17,11 +17,9 @@
                       ▲              
                        ▲    △        
 
-## Contents
+## Contracts
 
-The project is split into separate deployments as follows
-
-### Manifold Generative Series Extension for Rainscape
+### Manifold Generative Series Extension (for Rainscape)
 
 Rainscapes uses a Manifold Creator Contract. In order to mint a generative
 on-chain series on top of it, we implemented our own extension (`GenerativeSeriesExtension`).
@@ -44,8 +42,6 @@ The actual artwork is implemented in the main renderer (`RainscapesRenderer`).
 The main renderer also has extension points for gas observer, description field
 and script files, with the last one allowing reusability of script assets in case of renderer updates.
 
-### Rainscapes Observatory
-
 Default implementation for the gas observer was implemented as observatory
 plugin (`RainscapesObservatory`). It contains a naive implementation of gas
 counter to allow artwork to gracefully degrate in low gas conditions.
@@ -59,7 +55,17 @@ Minter has hard-coded creator contract and extension addresses that cannot be
 changed. Once a minting period has been set, it cannot be cancelled
 (but creator contract admin can change minter address to deny access).
 
-## Developer Guide
+### Rainscapes Data
+
+Manifold creator contract only exposes data through tokenURI. For make 
+usability of on-chain data more convenient, a supplementary data contract
+has been implemented (`RainscapesData`).
+
+The data contract can be plugged in to creator contract and generative
+series extension, and provides a layer of convenience for accessing all
+on-chain assets (token data in URI, JSON, HTML and image formats).
+
+## How to build
 
 Install foundry+forge
 
@@ -70,3 +76,6 @@ Build:
 Run tests with debug info:
 
         forge test -vvv
+
+## Creating a test batch
+
