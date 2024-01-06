@@ -21,7 +21,8 @@ contract DeployRainscapes is Script {
     }
 
     function run() public {
-        vm.startBroadcast();
+        // Start broadcast
+        vm.startBroadcast(deployerPrivateKey);
 
         // Deploy observatory
         RainscapesObservatory observatory = new RainscapesObservatory();
@@ -32,7 +33,13 @@ contract DeployRainscapes is Script {
         // Deploy renderer
         RainscapesRenderer renderer = new RainscapesRenderer(address(observatory), address(scriptSource));
 
+        // Create generative series
+        genSeriesExtension.createSeries(creatorContractAddress, 64, address(renderer));
+
         // Set renderer in extension for the creator contract address
         genSeriesExtension.setRenderer(creatorContractAddress, address(renderer));
+
+        // End broadcast
+        vm.stopBroadcast();
     }
 }

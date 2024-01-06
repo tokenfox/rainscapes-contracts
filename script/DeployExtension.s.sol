@@ -14,6 +14,8 @@ contract DeployExtension is Script {
 
     function run() public {
         vm.broadcast(deployerPrivateKey);
+
+        // Deploy extension
         GenerativeSeriesExtension extension = new GenerativeSeriesExtension();
         console2.log('Extension deployed at', address(extension));
     }
