@@ -7,3 +7,6 @@
 [submodule "lib/solady"]
 	path = lib/solady
 	url = https://github.com/Vectorized/solady
+[submodule "lib/creator-core-solidity"]
+	path = lib/creator-core-solidity
+	url = https://github.com/manifoldxyz/creator-core-solidity
