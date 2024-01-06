@@ -52,7 +52,6 @@ contract RainscapesMinterTest is Test {
     function testPublicMintsOpenAt() public {
         uint256 opensAt = minter.publicMintOpensAt();
 
-        console2.log(opensAt);
         assertEq(opensAt, 2000);
     }
 
