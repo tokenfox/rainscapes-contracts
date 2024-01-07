@@ -143,3 +143,15 @@ minter needs to be deployed:
 The script does everything including setting mint price and scheduling
 the mint. Walk through the script before running it to make sure it contains
 correct configurations.
+
+### 6. Setting up ENS for web3:// protocol
+
+In particular the data contract contains methods that can be easily consumed by
+using web3 protocol (https://docs.web3url.io/).
+
+ENS can be configured to support the data contract on Optimism as follows:
+
+- Register ENS domain name (here: `rainscapes.eth`)
+- If necessary register resolver
+- Add TXT record for `contentcontract` with value `oeth:<data_contract_address>`
+- After the record is set, web3 compatible browsers and proxies can resolve to your data contract
