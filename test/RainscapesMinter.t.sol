@@ -22,7 +22,7 @@ contract RainscapesMinterTest is Test {
 
     function setUp() public {
         minter1 = vm.createWallet("minter1");
-        creatorContract = new ERC721Creator("Rainscapes", "Rainscapes");
+        creatorContract = new ERC721Creator("Rainscapes", "RAIN");
         GenerativeSeriesExtension generativeSeriesExtension = new GenerativeSeriesExtension();
         creatorContract.registerExtension(address(generativeSeriesExtension), "");
         minter = new RainscapesMinter(
