@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build": "rollup main.js --file bundle.js"
+    "build": "rollup -c"
   },
   "author": "",
   "license": "ISC",
